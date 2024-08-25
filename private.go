@@ -51,7 +51,7 @@ func (lc *lg) Trace(msg string) {
 	lc.realTracef(msg)
 }
 
-// ----------PANIC----------
+// ----------PANIC---------
 func (lc *lg) realPanicf(msg string, args ...interface{}) {
 	lc.wgLogs.Add(1)
 	lc.zl.WithLevel(zerolog.PanicLevel).CallerSkipFrame(2).Err(errors.Errorf(msg, args...)).Send()
