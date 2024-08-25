@@ -1,4 +1,4 @@
-package main
+package lg
 
 import (
 	"github.com/rs/zerolog"
